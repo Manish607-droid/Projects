@@ -152,13 +152,8 @@ print(By_revenue)
 
 # Q.3) Which city had maximum revenue , or , Which Manager earned maximum revenue ?
 dataset['Manager'].str.strip()
-max_rev_city = dataset.groupby('City')['Revenue'].sum(),sort_values(ascending=False)
+max_rev_city = dataset.groupby('City')['Revenue'].sum().sort_values(ascending=False)
 print(max_rev_city)
-print()
-print()
-print()
-max_rev_row = dataset[dataset['Revenue']==max_rev_city]
-print(max_rev_row)
 print()
 print()
 print()
