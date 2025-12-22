@@ -140,7 +140,7 @@ print(Preferred_payment_method)
 # Q.2) Most Selling Product - By Quantity & By Revenue ?
 Most_selling_product = dataset.groupby('Product')['Quantity'].sum().sort_values(ascending = False)
 print(Most_selling_product)
-# The most sold product is Fries followed by Burgers
+# The most sold product is Bevrages followed by Fries and Burgers
 
 # Since there was no column to calculate revenue hence we created a new column named revenue
 dataset['Revenue'] = dataset['Price'] * dataset['Quantity']
