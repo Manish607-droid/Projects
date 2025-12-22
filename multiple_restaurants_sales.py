@@ -32,7 +32,7 @@ dataset.isnull().sum()
 print(dataset.duplicated().sum())
 # Hence there are no duplicates prsent
 
-# Now we will be seeing some basoc and statistical information of the dataset
+# Now we will be seeing some basic and statistical information of the dataset
 print(dataset.columns)
 print()
 print()
@@ -138,9 +138,9 @@ print(Preferred_payment_method)
 # The most preferred payment method is Card Payment followed by Cash
 
 # Q.2) Most Selling Product - By Quantity & By Revenue ?
-Most_selling_product = dataset.groupby('Product')['Quantity'].sum()
+Most_selling_product = dataset.groupby('Product')['Quantity'].sum().sort_values(ascending = False)
 print(Most_selling_product)
-# The most sold product is Beverages followed by Burgers
+# The most sold product is Fries followed by Burgers
 
 # Since there was no column to calculate revenue hence we created a new column named revenue
 dataset['Revenue'] = dataset['Price'] * dataset['Quantity']
